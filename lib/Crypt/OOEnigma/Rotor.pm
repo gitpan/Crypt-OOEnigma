@@ -7,7 +7,7 @@
 #
 
 package Crypt::OOEnigma::Rotor ;
-$VERSION="0.2";
+$VERSION="0.3";
 
 =head1 NAME
 
@@ -162,15 +162,18 @@ sub rotate {
   # TODO consider efficiency
   my $self = shift ; 
   my $places = shift;
+  my @alpha = (A..Z);
   
   # get the old substitution and rotate it
-  my @sub = values(%{$self->current_cipher()});
+  my @sub = (); 
+  foreach my $key (@alpha){ 
+    push @sub, $self->current_cipher()->{$key};
+  }
   for(my $i = 0 ; $i < $places ; ++$i){
     unshift @sub, (pop @sub);
   }
-  
+
   # create a new substitution hash from the new substitution
-  my @alpha = (A..Z);
   my $newSub = {};
   foreach  my $key (@alpha){ 
     $newSub->{$key} = shift @sub ; 

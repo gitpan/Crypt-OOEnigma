@@ -7,7 +7,7 @@
 #
 
 package Crypt::OOEnigma::Military ;
-$VERSION="0.2";
+$VERSION="0.3";
 =head1 NAME
 
 Crypt::OOEnigma::Military -  A military Enigma machine circa 1940.  It

@@ -35,7 +35,7 @@ Crypt::OOEnigma - A World War II Enigma machine in a flexible OO framework
 =cut 
 use Carp;
 use vars qw($VERSION);
-$VERSION = '0.2';
+$VERSION="0.3";
 
 use Crypt::OOEnigma::Military;
 use Crypt::OOEnigma::Rotor ;

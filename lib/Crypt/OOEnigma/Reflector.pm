@@ -7,7 +7,7 @@
 #
 
 package Crypt::OOEnigma::Reflector ;
-$VERSION="0.2";
+$VERSION="0.3";
 =head1 NAME
 
 Crypt::OOEnigma::Reflector - The Reflector object for use in Crypt::OOEnigma
