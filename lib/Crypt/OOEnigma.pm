@@ -35,7 +35,7 @@ Crypt::OOEnigma - A World War II Enigma machine in a flexible OO framework
 =cut 
 use Carp;
 use vars qw($VERSION);
-$VERSION = '0.1';
+$VERSION = '0.2';
 
 use Crypt::OOEnigma::Military;
 use Crypt::OOEnigma::Rotor ;
@@ -169,14 +169,14 @@ our $numrotors = 3 ; # As in a German Army Enigma
 #
 # We need a set of 6 substitutions for 6 rotors from which to choose 3
 #
-my @subs = ();
-push @subs, [V,U,D,J,A,E,Y,N,H,F,P,Q,C,X,G,K,L,T,W,Z,R,O,B,M,S,I];
-push @subs, [P,Z,I,O,U,C,B,T,V,K,Q,L,H,G,W,D,F,X,A,J,E,R,N,S,M,Y];
-push @subs, [W,S,D,B,I,J,V,M,X,K,Y,H,P,O,L,T,N,A,Q,F,Z,C,U,E,G,R];
-push @subs, [R,K,A,T,Q,B,S,M,D,O,L,J,C,G,H,I,W,Y,P,X,E,U,Z,F,V,N];
-push @subs, [Y,S,F,J,Z,V,N,A,P,R,T,I,H,G,U,O,L,E,C,M,W,Q,B,K,X,D];
-push @subs, [W,U,R,B,E,L,K,O,X,V,Q,H,M,N,G,I,A,S,T,F,Z,Y,C,D,J,P];
-
+my @subs = (
+    [V,U,D,J,A,E,Y,N,H,F,P,Q,C,X,G,K,L,T,W,Z,R,O,B,M,S,I],
+    [P,Z,I,O,U,C,B,T,V,K,Q,L,H,G,W,D,F,X,A,J,E,R,N,S,M,Y],
+    [W,S,D,B,I,J,V,M,X,K,Y,H,P,O,L,T,N,A,Q,F,Z,C,U,E,G,R],
+    [R,K,A,T,Q,B,S,M,D,O,L,J,C,G,H,I,W,Y,P,X,E,U,Z,F,V,N],
+    [Y,S,F,J,Z,V,N,A,P,R,T,I,H,G,U,O,L,E,C,M,W,Q,B,K,X,D],
+    [W,U,R,B,E,L,K,O,X,V,Q,H,M,N,G,I,A,S,T,F,Z,Y,C,D,J,P],
+);
 
 #
 # Now we can get on with the enigma

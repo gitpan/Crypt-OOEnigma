@@ -3,3 +3,6 @@ Revision history for Perl extension Crypt::OOEnigma.
 0.1 - An object-oriented Perl Enigma machine
   21 Apr 02
 
+0.2 - Minor bugfix. Bug revelead by Perl 5.8.0
+  04 Oct 02
+

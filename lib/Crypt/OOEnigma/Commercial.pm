@@ -7,7 +7,7 @@
 #
 
 package Crypt::OOEnigma::Commercial ;
-$VERSION="0.1";
+$VERSION="0.2";
 =head1 NAME
 
 Crypt::OOEnigma::Commercial -  A commercial Enigma machine circa 1940.
